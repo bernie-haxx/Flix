@@ -4,7 +4,7 @@ register=template.Library()
 
 @register.filter(name='datas')
 def data(value):
-	response = requests.get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q={value}%2DOfficial+&type=video&videoCaption=closedCaption&key=AIzaSyCUJSh3QGecsOPq-orMsEiLn5muL1sotKQ')	
+	response = requests.get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q={value}%2DMovie%2DOfficial+&type=video&videoCaption=closedCaption&key=AIzaSyCUJSh3QGecsOPq-orMsEiLn5muL1sotKQ')	
 	datas = response.json()
 	print(datas.keys())
 	try:
